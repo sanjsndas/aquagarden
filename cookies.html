@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookie Policy | AquaGarden Care</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        :root {
+            --primary: #2b6cb0;
+            --secondary: #38b2ac;
+            --accent: #f6ad55;
+            --dark: #2d3748;
+            --light: #f7fafc;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+        
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+                        url('https://images.unsplash.com/photo-1605000797499-95a51c5269ae?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            min-height: 50vh;
+        }
+        
+        .water-drop {
+            position: relative;
+        }
+        
+        .water-drop::after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%232b6cb0"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg>') no-repeat;
+            background-size: contain;
+            opacity: 0.1;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+        
+        .pruning-icon {
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23f6ad55"><path d="M7.05 14.12L5.5 12.59l-2.12 2.12 3.18 3.18-3.18 3.18 2.12 2.12 3.18-3.18 3.18 3.18 2.12-2.12-3.18-3.18 3.18-3.18-2.12-2.12-3.18 3.18zm9.9-11.71l-2.12 2.12 3.18 3.18-3.18 3.18 2.12 2.12 3.18-3.18 3.18 3.18 2.12-2.12-3.18-3.18 3.18-3.18-2.12-2.12-3.18 3.18z"/></svg>') no-repeat;
+            background-size: contain;
+            width: 24px;
+            height: 24px;
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 5px;
+        }
+        
+        .point-icon {
+            background-color: #f6ad55;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 10px;
+        }
+        
+        .nav-link {
+            position: relative;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background: var(--accent);
+            bottom: 0;
+            left: 0;
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        .nav-link[aria-current="page"]::after {
+            width: 100%;
+        }
+
+        /* Cookie Consent Dialog */
+        .cookie-consent {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(43, 108, 176, 0.9);
+            color: white;
+            padding: 20px;
+            z-index: 1000;
+            display: none;
+        }
+        
+        .cookie-consent.visible {
+            display: flex;
+        }
+        
+        .cookie-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .cookie-text {
+            flex: 1;
+            padding-right: 20px;
+        }
+        
+        .cookie-buttons {
+            display: flex;
+            gap: 10px;
+        }
+        
+        .cookie-btn {
+            padding: 8px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            border: none;
+            font-weight: 600;
+        }
+        
+        .cookie-accept {
+            background: var(--accent);
+            color: white;
+        }
+        
+        .cookie-decline {
+            background: white;
+            color: var(--primary);
+        }
+        
+        @media (max-width: 768px) {
+            .cookie-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .cookie-text {
+                padding-right: 0;
+                margin-bottom: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-3">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-4">
+                    <div class="pruning-icon"></div>
+                    <span class="text-xl font-bold text-gray-800">AquaGarden Care</span>
+                </div>
+                <div class="hidden md:flex items-center space-x4">
+                    <div class="hidden md:flex items-center space-x-8">
+                        <a href="index.html" class="nav-link py-2 px-3 text-gray-700 hover:text-gray-900" tabindex="0">Home</a>
+                        <a href="privacy.html" class="nav-link py-2 px-3 text-gray-700 hover:text-gray-900" tabindex="0">Privacy</a>
+                        <a href="terms.html" class="nav-link py-2 px-3 text-gray-700 hover:text-gray-900" tabindex="0">Terms & Conditions</a>
+                        <a href="cookies.html" class="nav-link py-2 px-3 text-gray-700 hover:text-gray-900" aria-current="page" tabindex="0">Cookies</a>
+                        <a href="contact.html" class="nav-link py-2 px-3 text-gray-700 hover:text-gray-900" tabindex="0">Contact Us</a>
+                    </div>
+                </div>
+                <button class="md:hidden focus:outline-none">
+                    <svg class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero flex items-center justify-center text-center text-white">
+        <div class="container mx-auto px-6">
+            <h1 class="text-4xl md:text-6xl font-bold mb-4">Cookie Policy</h1>
+            <p class="text-xl md:text-2xl mb-8">Our use of cookies and similar technologies</p>
+            <p class="text-lg md:text-xl mb-8 max-w-2xl mx-auto">Learn how we use cookies to enhance your browsing experience</p>
+        </div>
+    </section>
+
+    <!-- Cookies Content -->
+    <section class="py-16 bg-white water-drop">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto">
+                <p class="mb-6 text-lg">This Cookie Policy explains how AquaGarden Care ("we", "us", or "our") uses cookies and similar tracking technologies when you visit our website. By using our website, you consent to the use of cookies in accordance with this policy. If you do not agree to our use of cookies, you should adjust your browser settings accordingly or refrain from using our website.</p>
+                
+                <p class="mb-6 text-lg">Cookies are small text files that are placed on your device when you visit a website. They are widely used to make websites work more efficiently, as well as to provide information to the website owners. This policy describes the types of cookies we use, the purposes for using them, and how you can manage your cookie preferences.</p>
+                
+                <h2 class="text-3xl font-bold mb-6">Types of Cookies We Use</h2>
+                
+                <!-- Point 1 -->
+                <div class="mb-8">
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <span class="point-icon text-white font-bold">1</span>
+                        Essential Cookies
+                    </h3>
+                    <p class="text-gray-700">Essential cookies are necessary for the website to function properly. These cookies enable core functionality such as security, network management, and accessibility. Without these cookies, certain features of the website may not work correctly. For example, we use session cookies to keep you logged in as you navigate between pages. These cookies do not collect personal information and are typically deleted when you close your browser.</p>
+                </div>
+
+                <!-- Point 2 -->
+                <div class="mb-8">
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <span class="point-icon text-white font-bold">2</span>
+                        Performance Cookies
+                    </h3>
+                    <p class="text-gray-700">Performance cookies help us understand how visitors interact with our website by collecting and reporting information anonymously. These cookies allow us to count visits and traffic sources so we can measure and improve site performance. They help us know which pages are most popular and how visitors move around the site. These cookies don't collect information that identifies a visitor personally. We use services like Google Analytics to implement these cookies.</p>
+                </div>
+
+                <!-- Point 3 -->
+                <div class="mb-8">
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <span class="point-icon text-white font-bold">3</span>
+                        Functionality Cookies
+                    </h3>
+                    <p class="text-gray-700">Functionality cookies enable the website to remember choices you make (such as your username, language preference, or region) and provide enhanced, more personal features. These cookies may be set by us or by third-party providers whose services we've added to our pages. The information these cookies collect may be anonymized and they cannot track your browsing activity on other websites. For instance, they might store your preferred currency for pricing display.</p>
+                </div>
+
+                <!-- Point 4 -->
+                <div class="mb-8">
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <span class="point-icon text-white font-bold">4</span>
+                        Targeting/Advertising Cookies
+                    </h3>
+                    <p class="text-gray-700">Targeting cookies may be set through our site by our advertising partners. They may be used by those companies to build a profile of your interests and show you relevant advertisements on other sites. They work by uniquely identifying your browser and internet device. If you do not allow these cookies, you will experience less targeted advertising. These cookies might store information like what pages you visit or how long you spend on different sections of our website.</p>
+                </div>
+
+                <!-- Point 5 -->
+                <div class="mb-8">
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <span class="point-icon text-white font-bold">5</span>
+                        First-Party Cookies
+                    </h3>
+                    <p class="text-gray-700">First-party cookies are set directly by us when you visit our website. These are used to provide a better user experience and remember your preferences. For example, we might use a first-party cookie to remember that you've accepted our cookie policy so you don't see the notification on every visit. First-party cookies are generally considered less of a privacy concern than third-party cookies because they can only be read by us.</p>
+                </div>
+
+                <h2 class="text-3xl font-bold mb-6">Cookie Duration</h2>
+
+                <!-- Point 6 -->
+                <div class="mb-8">
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <span class="point-icon text-white font-bold">6</span>
+                        Session Cookies
+                    </h3>
+                    <p class="text-gray-700">Session cookies are temporary cookies that remain on your device until you close your web browser. These enable our website to link your actions during a browser session, such as remembering items in your shopping cart or form information you've entered. Session cookies are essential for certain website features to work properly and are usually deleted automatically when you close your browser. They don't collect information from your computer or store any personally identifiable information.</p>
+                </div>
+
+                <!-- Point 7 -->
+                <div class="mb-8">
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <span class="point-icon text-white font-bold">7</span>
+                        Persistent Cookies
+                    </h3>
+                    <p class="text-gray-700">Persistent cookies remain on your device for the period of time specified in the cookie or until you manually delete them. These cookies help us recognize you as a returning visitor and remember your preferences, providing a more personalized experience. For example, they might remember your language preference so you don't have to select it every time you visit. Persistent cookies typically have expiration dates ranging from several days to a few years from the date they were created.</p>
+                </div>
+
+                <h2 class="text-3xl font-bold mb-6">Third-Party Cookies</h2>
+
+                <!-- Point 8 -->
+                <div class="mb-8">
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <span class="point-icon text-white font-bold">8</span>
+                        Analytics Cookies
+                    </h3>
+                    <p class="text-gray-700">We use third-party analytics cookies, such as those provided by Google Analytics, to gather anonymous information about how visitors use our website. These cookies collect information like the number of visitors to the site, what pages they visit, and how long they stay on each page. This helps us understand user behavior and improve our website's performance. The data collected is aggregated and anonymous, meaning we cannot identify individual visitors through these cookies.</p>
+                </div>
+
+                <!-- Point 9 -->
+                <div class="mb-8">
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <span class="point-icon text-white font-bold">9</span>
+                        Social Media Cookies
+                    </h3>
+                    <p class="text-gray-700">Our website may include social media features like Facebook "Like" buttons or Twitter widgets. These features may set cookies that allow the social media companies to track your visit to our site and may be used for their own purposes according to their privacy policies. These cookies enable you to share content directly to social media platforms and help us measure the effectiveness of our social media activities. You should review the relevant social media sites' cookie policies for more information.</p>
+                </div>
+
+                <!-- Point 10 -->
+                <div class="mb-8">
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <span class="point-icon text-white font-bold">10</span>
+                        Advertising Partner Cookies
+                    </h3>
+                    <p class="text-gray-700">We work with advertising partners who may set cookies when you visit our website to serve you with relevant ads on other websites. These cookies collect information about your browsing habits to show you ads more relevant to your interests. They also help prevent you from seeing the same ad repeatedly and measure the effectiveness of advertising campaigns. You can opt out of interest-based advertising through the Digital Advertising Alliance's consumer choice tools.</p>
+                </div>
+
+                <h2 class="text-3xl font-bold mb-6">Your Cookie Choices</h2>
+
+                <!-- Point 11 -->
+                <div class="mb-8">
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <span class="point-icon text-white font-bold">11</span>
+                        Browser Settings
+                    </h3>
+                    <p class="text-gray-700">Most web browsers allow you to control cookies through their settings preferences. You can typically set your browser to refuse all cookies or to indicate when a cookie is being sent. However, if you disable cookies entirely, some features of our website may not function properly. Each browser manages cookie controls differently, so visit your browser's help menu for specific instructions. Common browsers like Chrome, Firefox, Safari, Edge, and Internet Explorer all provide cookie management features.</p>
+                </div>
+
+                <!-- Point 12 -->
+                <div class="mb-8">
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <span class="point-icon text-white font-bold">12</span>
+                        Opt-Out Tools
+                    </h3>
+                    <p class="text-gray-700">Several organizations provide opt-out tools that allow you to control the collection and use of information for interest-based advertising. These include the Digital Advertising Alliance's opt-out tool (available in the US, Canada, and Europe) and the Network Advertising Initiative's opt-out tool. By using these tools, you can opt out of targeted advertising from participating companies. However, opting out does not mean you will no longer see ads; it simply means that the ads you see may be less relevant to your interests.</p>
+                </div>
+
+                <!-- Point 13 -->
+                <div class="mb-8">
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <span class="point-icon text-white font-bold">13</span>
+                        Cookie Consent Management
+                    </h3>
+                    <p class="text-gray-700">You can manage your cookie preferences through our cookie consent management tool, which allows you to accept or decline specific categories of cookies. This tool is available on our website and can be accessed at any time. By adjusting your preferences, you can control which types of cookies are set on your device while visiting our site.</p>
+                </div>
+
+                <!-- Point 14 -->
+                <div class="mb-8">
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <span class="point-icon text-white font-bold">14</span>
+                        Third-Party Cookie Management
+                    </h3>
+                    <p class="text-gray-700">If you wish to manage third-party cookies, you will need to visit the respective websites of those third parties. Many third-party advertisers provide their own opt-out mechanisms, which can be found on their websites. We encourage you to review their privacy policies and cookie management options to understand how they handle your data.</p>
+                </div>
+
+                <h2 class="text-3xl font-bold mb-6">Changes to This Cookie Policy</h2>
+
+                <!-- Point 15 -->
+                <div class="mb-8">
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <span class="point-icon text-white font-bold">15</span>
+                        Policy Updates
+                    </h3>
+                    <p class="text-gray-700">We may update this Cookie Policy from time to time to reflect changes in our practices or for other operational, legal, or regulatory reasons. We will notify you of any significant changes by posting a notice on our website or by other means. We encourage you to review this policy periodically to stay informed about our use of cookies and related technologies.</p>
+                </div>
+
+                <!-- Point 16 -->
+                <div class="mb-8">
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <span class="point-icon text-white font-bold">16</span>
+                        Effective Date
+                    </h3>
+                    <p class="text-gray-700">This Cookie Policy is effective as of [insert effective date]. By continuing to use our website after any changes to this policy, you consent to the updated terms regarding our use of cookies.</p>
+                </div>
+
+                <h2 class="text-3xl font-bold mb-6">Contact Us</h2>
+
+                <!-- Point 17 -->
+                <div class="mb-8">
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <span class="point-icon text-white font-bold">17</span>
+                        Questions About Cookies
+                    </h3>
+                    <p class="text-gray-700">If you have any questions about our use of cookies or this Cookie Policy, please contact us at the address provided below. We are happy to provide you with any additional information you may need regarding our cookie practices.</p>
+                </div>
+
+                <!-- Point 18 -->
+                <div class="mb-8">
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <span class="point-icon text-white font-bold">18</span>
+                        Customer Support
+                    </h3>
+                    <p class="text-gray-700">For customer support inquiries related to our website or services, please reach out to our support team. We are committed to assisting you with any issues or questions you may have regarding your experience on our site.</p>
+                </div>
+
+                <!-- Point 19 -->
+                <div class="mb-8">
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <span class="point-icon text-white font-bold">19</span>
+                        Feedback and Suggestions
+                    </h3>
+                    <p class="text-gray-700">We welcome your feedback and suggestions regarding our website and cookie practices. If you have ideas on how we can improve your experience or our policies, please let us know. Your input is valuable to us as we strive to enhance our services.</p>
+                </div>
+
+                <!-- Point 20 -->
+                <div class="mb-8">
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <span class="point-icon text-white font-bold">20</span>
+                        Privacy Concerns
+                    </h3>
+                    <p class="text-gray-700">If you have concerns about your privacy or how we handle your personal information, please refer to our Privacy Policy. This document outlines how we collect, use, and protect your data, including information related to cookies.</p>
+                </div>
+
+                <h2 class="text-3xl font-bold mb-6">Additional Information</h2>
+
+                <!-- Point 21 -->
+                <div class="mb-8">
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <span class="point-icon text-white font-bold">21</span>
+                        Cookie Policy Scope
+                    </h3>
+                    <p class="text-gray-700">This Cookie Policy applies to all users of our website and services. It is important for all visitors to understand how cookies are used and how they can manage their preferences. We encourage you to read this policy carefully to ensure you are informed about our practices.</p>
+                </div>
+
+                <!-- Point 22 -->
+                <div class="mb-8">
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <span class="point-icon text-white font-bold">22</span>
+                        Third-Party Links
+                    </h3>
+                    <p class="text-gray-700">Our website may contain links to third-party websites that have their own cookie policies. We are not responsible for the content or practices of these sites. We encourage you to review the cookie policies of any third-party sites you visit to understand their practices.</p>
+                </div>
+
+                <!-- Point 23 -->
+                <div class="mb-8">
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <span class="point-icon text-white font-bold">23</span>
+                        Cookie Consent Management Tools
+                    </h3>
+                    <p class="text-gray-700">We utilize cookie consent management tools to help you manage your cookie preferences easily. These tools allow you to accept or decline cookies based on your preferences and provide transparency regarding our cookie usage.</p>
+                </div>
+
+                <!-- Point 24 -->
+                <div class="mb-8">
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <span class="point-icon text-white font-bold">24</span>
+                        Cookie Policy Accessibility
+                    </h3>
+                    <p class="text-gray-700">This Cookie Policy is accessible from our website footer and is available for review at any time. We strive to make our policies clear and easy to understand, ensuring that all users can access important information regarding our cookie practices.</p>
+                </div>
+
+                <!-- Point 25 -->
+                <div class="mb-8">
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <span class="point-icon text-white font-bold">25</span>
+                        User Rights
+                    </h3>
+                    <p class="text-gray-700">As a user, you have rights regarding your personal data and how it is processed. This includes the right to access, correct, or delete your personal information. For more details on your rights, please refer to our Privacy Policy.</p>
+                </div>
+
+                <h2 class="text-3xl font-bold mb-6">Final Thoughts</h2>
+
+                <!-- Point 26 -->
+                <div class="mb-8">
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <span class="point-icon text-white font-bold">26</span>
+                        Importance of Cookies
+                    </h3>
+                    <p class="text-gray-700">Cookies play a crucial role in enhancing your browsing experience by enabling us to provide personalized content and services. Understanding how cookies work and how to manage them empowers you to make informed choices while using our website.</p>
+                </div>
+
+                <!-- Point 27 -->
+                <div class="mb-8">
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <span class="point-icon text-white font-bold">27</span>
+                        Continuous Improvement
+                    </h3>
+                    <p class="text-gray-700">We are committed to continuously improving our website and services, including our cookie practices. Your feedback and suggestions are invaluable in helping us achieve this goal, and we appreciate your engagement with our policies.</p>
+                </div>
+
+                <!-- Point 28 -->
+                <div class="mb-8">
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <span class="point-icon text-white font-bold">28</span>
+                        Community Engagement
+                    </h3>
+                    <p class="text-gray-700">We value our community and strive to engage with our users in meaningful ways. By understanding your preferences and concerns regarding cookies, we can foster a better relationship and enhance your overall experience on our website.</p>
+                </div>
+
+                <!-- Point 29 -->
+                <div class="mb-8">
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <span class="point-icon text-white font-bold">29</span>
+                        Transparency Commitment
+                    </h3>
+                    <p class="text-gray-700">Transparency is a core value for us. We aim to provide clear and concise information about our cookie practices, ensuring that you are fully informed about how we use cookies and how they impact your experience on our website.</p>
+                </div>
+
+                <!-- Point 30 -->
+                <div class="mb-8">
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <span class="point-icon text-white font-bold">30</span>
+                        Future Developments
+                    </h3>
+                    <p class="text-gray-700">As technology evolves, so do our cookie practices. We will continue to adapt our policies and practices to align with industry standards and regulations, ensuring that we provide a safe and enjoyable browsing experience for all users.</p>
+                </div>
+
+                <h2 class="text-3xl font-bold mb-6">Conclusion</h2>
+
+                <!-- Point 31 -->
+                <div class="mb-8">
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <span class="point-icon text-white font-bold">31</span>
+                        Acknowledgment of Policy
+                    </h3>
+                    <p class="text-gray-700">By using our website, you acknowledge that you have read and understood this Cookie Policy. Your continued use of our site signifies your acceptance of our cookie practices and your consent to the use of cookies as described herein.</p>
+                </div>
+
+                <!-- Point 32 -->
+                <div class="mb-8">
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <span class="point-icon text-white font-bold">32</span>
+                        Encouragement to Review
+                    </h3>
+                    <p class="text-gray-700">We encourage you to review this Cookie Policy regularly to stay informed about our practices. Changes may occur, and we want you to be aware of how we use cookies and how they affect your experience on our website.</p>
+                </div>
+
+                <!-- Point 33 -->
+                <div class="mb-8">
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <span class="point-icon text-white font-bold">33</span>
+                        Contact for Clarifications
+                    </h3>
+                    <p class="text-gray-700">If you have any questions or need clarifications regarding this Cookie Policy, please do not hesitate to contact us. We are here to assist you and provide any information you may need regarding our cookie practices.</p>
+                </div>
+
+                <!-- Point 34 -->
+                <div class="mb-8">
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <span class="point-icon text-white font-bold">34</span>
+                        Commitment to User Privacy
+                    </h3>
+                    <p class="text-gray-700">We are committed to protecting your privacy and ensuring that your personal information is handled responsibly. Our cookie practices are designed to enhance your experience while respecting your privacy preferences.</p>
+                </div>
+
+                <!-- Point 35 -->
+                <div class="mb-8">
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <span class="point-icon text-white font-bold">35</span>
+                        Final Note
+                    </h3>
+                    <p class="text-gray-700">Thank you for taking the time to read our Cookie Policy. We appreciate your interest in understanding how we use cookies and how they impact your experience on our website. Your trust is important to us, and we strive to maintain it through transparency and responsible practices.</p>
+                </div>
+
+                <!-- Point 36 -->
+                <div class="mb-8">
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <span class="point-icon text-white font-bold">36</span>
+                        Acknowledgment of Changes
+                    </h3>
+                    <p class="text-gray-700">If we make any changes to this Cookie Policy, we will notify you through our website or other means. Your continued use of our website after any changes signifies your acceptance of the updated policy.</p>
+                </div>
+
+                <!-- Point 37 -->
+                <div class="mb-8">
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <span class="point-icon text-white font-bold">37</span>
+                        Importance of User Consent
+                    </h3>
+                    <p class="text-gray-700">User  consent is essential for us to use cookies effectively. We value your preferences and strive to provide you with options to manage your cookie settings according to your comfort level.</p>
+                </div>
+
+                <!-- Point 38 -->
+                <div class="mb-8">
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <span class="point-icon text-white font-bold">38</span>
+                        Encouragement to Engage
+                    </h3>
+                    <p class="text-gray-700">We encourage you to engage with us regarding our cookie practices. Your feedback helps us improve our policies and enhance your experience on our website.</p>
+                </div>
+
+                <!-- Point 39 -->
+                <div class="mb-8">
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <span class="point-icon text-white font-bold">39</span>
+                        Commitment to Best Practices
+                    </h3>
+                    <p class="text-gray-700">We are committed to following best practices in our cookie usage and privacy policies. Our goal is to provide a safe and enjoyable browsing experience for all users.</p>
+                </div>
+
+                <!-- Point 40 -->
+                <div class="mb-8">
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <span class="point-icon text-white font-bold">40</span>
+                        Thank You
+                    </h3>
+                    <p class="text-gray-700">Thank you for visiting AquaGarden Care and for taking the time to understand our cookie practices. We appreciate your trust and look forward to serving you.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cookie Consent Dialog -->
+    <div class="cookie-consent" id="cookieConsent">
+        <div class="cookie-content">
+            <div class="cookie-text">
+                <p>We use cookies to enhance your experience on our website. By clicking "Accept", you consent to our use of cookies. You can manage your preferences in your browser settings.</p>
+            </div>
+            <div class="cookie-buttons">
+                <button class="cookie-btn cookie-accept" id="acceptCookies">Accept</button>
+                <button class="cookie-btn cookie-decline" id="declineCookies">Decline</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="py-8 bg-white">
+        <div class="container mx-auto px-6 text-center">
+            <p class="text-gray-700">Address: 40 W 4th St, New York, NY 10012, USA</p>
+            <p class="text-gray-700">Phone: +1 (212) 555-0187</p>
+            <p class="text-gray-700">© 2023 AquaGarden Care. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const cookieConsent = document.getElementById('cookieConsent');
+            const acceptCookies = document.getElementById('acceptCookies');
+            const declineCookies = document.getElementById('declineCookies');
+
+            // Show cookie consent dialog
+            cookieConsent.classList.add('visible');
+
+            acceptCookies.addEventListener('click', function() {
+                cookieConsent.style.display = 'none';
+                // Logic to accept cookies can be added here
+            });
+
+            declineCookies.addEventListener('click', function() {
+                cookieConsent.style.display = 'none';
+                // Logic to decline cookies can be added here
+            });
+        });
+    </script>
+</body>
+</html>

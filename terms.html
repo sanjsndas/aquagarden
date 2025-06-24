@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms & Conditions | AquaGarden Care</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        :root {
+            --primary: #2b6cb0;
+            --secondary: #38b2ac;
+            --accent: #f6ad55;
+            --dark: #2d3748;
+            --light: #f7fafc;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+        
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+                        url('https://images.unsplash.com/photo-1605000797499-95a51c5269ae?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            min-height: 50vh;
+        }
+        
+        .water-drop {
+            position: relative;
+        }
+        
+        .water-drop::after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%232b6cb0"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg>') no-repeat;
+            background-size: contain;
+            opacity: 0.1;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+        
+        .pruning-icon {
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23f6ad55"><path d="M7.05 14.12L5.5 12.59l-2.12 2.12 3.18 3.18-3.18 3.18 2.12 2.12 3.18-3.18 3.18 3.18 2.12-2.12-3.18-3.18 3.18-3.18-2.12-2.12-3.18 3.18zm9.9-11.71l-2.12 2.12 3.18 3.18-3.18 3.18 2.12 2.12 3.18-3.18 3.18 3.18 2.12-2.12-3.18-3.18 3.18-3.18-2.12-2.12-3.18 3.18z"/></svg>') no-repeat;
+            background-size: contain;
+            width: 24px;
+            height: 24px;
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 5px;
+        }
+        
+        .testimonial-card {
+            transition: transform 0.3s ease;
+        }
+        
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .gallery-item {
+            transition: all 0.3s ease;
+            overflow: hidden;
+        }
+        
+        .gallery-item:hover {
+            transform: scale(1.03);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+        
+        .gallery-item img {
+            transition: transform 0.5s ease;
+        }
+        
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+        
+        .nav-link {
+            position: relative;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background: var(--accent);
+            bottom: 0;
+            left: 0;
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        .nav-link[aria-current="page"]::after {
+            width: 100%;
+        }
+        
+        .service-card {
+            transition: all 0.3s ease;
+            overflow: hidden;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+        
+        .point-icon {
+            background-color: #f6ad55;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-3">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-4">
+                    <div class="pruning-icon"></div>
+                    <span class="text-xl font-bold text-gray-800">AquaGarden Care</span>
+                </div>
+                <div class="hidden md:flex items-center space-x4">
+                    <div class="hidden md:flex items-center space-x-8">
+                        <a href="index.html" class="nav-link py-2 px-3 text-gray-700 hover:text-gray-900" tabindex="0">Home</a>
+                        <a href="privacy.html" class="nav-link py-2 px-3 text-gray-700 hover:text-gray-900" tabindex="0">Privacy</a>
+                        <a href="terms.html" class="nav-link py-2 px-3 text-gray-700 hover:text-gray-900" aria-current="page" tabindex="0">Terms & Conditions</a>
+                        <a href="cookies.html" class="nav-link py-2 px-3 text-gray-700 hover:text-gray-900" tabindex="0">Cookies</a>
+                        <a href="contact.html" class="nav-link py-2 px-3 text-gray-700 hover:text-gray-900" tabindex="0">Contact Us</a>
+                    </div>
+                </div>
+                <button class="md:hidden focus:outline-none">
+                    <svg class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero flex items-center justify-center text-center text-white">
+        <div class="container mx-auto px-6">
+            <h1 class="text-4xl md:text-6xl font-bold mb-4">Terms & Conditions</h1>
+            <p class="text-xl md:text-2xl mb-8">Understanding our service agreement</p>
+            <p class="text-lg md:text-xl mb-8 max-w-2xl mx-auto">Please read these terms carefully before using our services</p>
+        </div>
+    </section>
+
+    <!-- Terms Content -->
+    <section class="py-16 bg-white water-drop">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto">
+                <p class="mb-6 text-lg">Welcome to AquaGarden Care. These Terms & Conditions outline the rules and regulations for the use of our services. By accessing or using our services, you accept these terms in full. If you disagree with these terms or any part of these terms, you must not use our services.</p>
+                
+                <p class="mb-6 text-lg">These Terms & Conditions are effective as of [insert effective date] and apply to all visitors, users, and others who access or use our services. We may revise these terms at any time without notice. By using our services, you agree to be bound by the then-current version of these Terms & Conditions.</p>
+                
+                <h2 class="text-3xl font-bold mb-6">1. Definitions</h2>
+                
+                <!-- Point 1 -->
+                <div class="mb-8">
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <span class="point-icon text-white font-bold">1</span>
+                        Services
+                    </h3>
+                    <p class="text-gray-700">"Services" refers to all garden care, irrigation system installation and maintenance, pruning services, and related offerings provided by AquaGarden Care, including but not limited to those described on our website and in our service agreements. This includes both one-time services and ongoing maintenance contracts.</p>
+                </div>
+
+                <!-- Point 2 -->
+                <div class="mb-8">
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <span class="point-icon text-white font-bold">2</span>
+                        Client
+                    </h3>
+                    <p class="text-gray-700">"Client" refers to any individual or entity that engages AquaGarden Care to provide services, whether through a written contract, verbal agreement, or online booking. This includes property owners, tenants with proper authorization, property managers, and other authorized representatives.</p>
+                </div>
+
+                <!-- Point 3 -->
+                <div class="mb-8">
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <span class="point-icon text-white font-bold">3</span>
+                        Property
+                    </h3>
+                    <p class="text-gray-700">"Property" refers to the physical location where services are to be performed, including residential homes, commercial properties, and public spaces. The property must be legally accessible and the client must have authority to authorize work to be performed on the premises.</p>
+                </div>
+
+                <!-- Point 4 -->
+                <div class="mb-8">
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <span class="point-icon text-white font-bold">4</span>
+                        Service Agreement
+                    </h3>
+                    <p class="text-gray-700">"Service Agreement" refers to the contract between AquaGarden Care and the client that outlines the scope of work, pricing, schedule, and other terms specific to the services being provided. This may be a written document, electronic agreement, or in some cases, a verbal agreement for small-scale services.</p>
+                </div>
+
+                <!-- Point 5 -->
+                <div class="mb-8">
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <span class="point-icon text-white font-bold">5</span>
+                        Business Hours
+                    </h3>
+                    <p class="text-gray-700">"Business Hours" refers to our standard operating hours of Monday through Friday, 8:00 AM to 6:00 PM, excluding federal holidays. Services performed outside these hours may be subject to additional charges unless otherwise specified in the service agreement.</p>
+                </div>
+
+                <h2 class="text-3xl font-bold mb-6">2. Service Provision</h2>
+
+                <!-- Point 6 -->
+                <div class="mb-8">
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <span class="point-icon text-white font-bold">6</span>
+                        Scope of Work
+                    </h3>
+                    <p class="text-gray-700">Services will be performed as described in the service agreement or as otherwise agreed upon in writing. Any changes to the scope of work must be approved by both parties in writing. AquaGarden Care reserves the right to refuse any service request that we determine to be unsafe, unethical, or outside our area of expertise.</p>
+                </div>
+
+                <!-- Point 7 -->
+                <div class="mb-8">
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <span class="point-icon text-white font-bold">7</span>
+                        Scheduling
+                    </h3>
+                    <p class="text-gray-700">Services will be scheduled at mutually agreeable times. While we strive to accommodate client preferences, we cannot guarantee specific time slots. Clients will be notified of scheduled service visits in advance when possible. Same-day or emergency services may be available at additional cost.</p>
+                </div>
+
+                <!-- Point 8 -->
+                <div class="mb-8">
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <span class="point-icon text-white font-bold">8</span>
+                        Access to Property
+                    </h3>
+                    <p class="text-gray-700">Client agrees to provide safe and unobstructed access to all areas where services are to be performed. This includes unlocking gates, securing pets, and removing obstacles. If our team cannot access necessary areas, the service may be rescheduled with a trip charge applied.</p>
+                </div>
+
+                <!-- Point 9 -->
+                <div class="mb-8">
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <span class="point-icon text-white font-bold">9</span>
+                        Property Conditions
+                    </h3>
+                    <p class="text-gray-700">Client warrants that the property is safe for our personnel to work on, free from hazardous materials, and that all underground utilities have been properly marked before any digging or excavation work begins. AquaGarden Care is not responsible for damage to unmarked utilities or underground obstacles.</p>
+                </div>
+
+                <!-- Point 10 -->
+                <div class="mb-8">
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <span class="point-icon text-white font-bold">10</span>
+                        Weather Conditions
+                    </h3>
+                    <p class="text-gray-700">Certain services may be postponed due to inclement weather at our discretion. We will make reasonable efforts to reschedule affected services promptly. Services requiring dry conditions (such as painting or certain pruning techniques) may need to wait for appropriate weather.</p>
+                </div>
+
+                <h2 class="text-3xl font-bold mb-6">3. Pricing and Payments</h2>
+
+                <!-- Point 11 -->
+                <div class="mb-8">
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <span class="point-icon text-white font-bold">11</span>
+                        Service Fees
+                    </h3>
+                    <p class="text-gray-700">Fees for services are as quoted in the service agreement or as otherwise agreed in writing. Prices are subject to change with notice for recurring services. One-time services are typically priced at the time of booking and honored for 30 days unless otherwise specified.</p>
+                </div>
+
+                <!-- Point 12 -->
+                <div class="mb-8">
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <span class="point-icon text-white font-bold">12</span>
+                        Additional Charges
+                    </h3>
+                    <p class="text-gray-700">Additional charges may apply for services not included in the original scope of work, difficult access, disposal of large amounts of green waste, or other unforeseen circumstances. These will be communicated to the client before being incurred whenever possible.</p>
+                </div>
+
+                <!-- Point 13 -->
+                <div class="mb-8">
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <span class="point-icon text-white font-bold">13</span>
+                        Payment Terms
+                    </h3>
+                    <p class="text-gray-700">Payment is due upon completion of services unless other arrangements have been made in writing. For ongoing services, payment is typically due within [number] days of invoice date. We accept various payment methods including credit cards, checks, and electronic transfers.</p>
+                </div>
+
+                <!-- Point 14 -->
+                <div class="mb-8">
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <span class="point-icon text-white font-bold">14</span>
+                        Late Payments
+                    </h3>
+                    <p class="text-gray-700">Late payments may be subject to interest charges of [percentage]% per month or the maximum allowed by law. Accounts more than [number] days past due may result in suspension of services until payment is received. Client agrees to pay all costs of collection, including reasonable attorney fees.</p>
+                </div>
+
+                <!-- Point 15 -->
+                <div class="mb-8">
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <span class="point-icon text-white font-bold">15</span>
+                        Taxes
+                    </h3>
+                    <p class="text-gray-700">All fees are exclusive of applicable sales, use, or other taxes unless otherwise stated. Client is responsible for paying all such taxes associated with services provided. Tax-exempt clients must provide valid exemption certificates before services are rendered.</p>
+                </div>
+
+                <h2 class="text-3xl font-bold mb-6">4. Cancellations and Changes</h2>
+
+                <!-- Point 16 -->
+                <div class="mb-8">
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <span class="point-icon text-white font-bold">16</span>
+                        Cancellation Policy
+                    </h3>
+                    <p class="text-gray-700">For scheduled services, we require at least [number] hours notice for cancellations or rescheduling. Late cancellations may be subject to a cancellation fee of up to [percentage]% of the service cost. Emergency cancellations due to unforeseen circumstances will be evaluated on a case-by-case basis </p>
+                </div>
+
+                <!-- Point 17 -->
+                <div class="mb-8">
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <span class="point-icon text-white font-bold">17</span>
+                        Changes to Scheduled Services
+                    </h3>
+                    <p class="text-gray-700">Clients may request changes to scheduled services, including modifications to the scope of work or timing. We will make reasonable efforts to accommodate such requests, but changes may be subject to availability and may incur additional charges.</p>
+                </div>
+
+                <!-- Point 18 -->
+                <div class="mb-8">
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <span class="point-icon text-white font-bold">18</span>
+                        Service Guarantee
+                    </h3>
+                    <p class="text-gray-700">AquaGarden Care strives to provide high-quality services. If a client is not satisfied with the service provided, they must notify us within [number] days of service completion. We will make reasonable efforts to address any concerns, which may include redoing the service at no additional charge.</p>
+                </div>
+
+                <!-- Point 19 -->
+                <div class="mb-8">
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <span class="point-icon text-white font-bold">19</span>
+                        Liability Limitations
+                    </h3>
+                    <p class="text-gray-700">AquaGarden Care's liability for any claims arising from the provision of services is limited to the amount paid by the client for the specific service in question. We are not liable for indirect, incidental, or consequential damages arising from our services.</p>
+                </div>
+
+                <!-- Point 20 -->
+                <div class="mb-8">
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <span class="point-icon text-white font-bold">20</span>
+                        Indemnification
+                    </h3>
+                    <p class="text-gray-700">Client agrees to indemnify and hold AquaGarden Care harmless from any claims, damages, losses, or expenses arising from their use of our services, including any claims made by third parties related to the property or services provided.</p>
+                </div>
+
+                <h2 class="text-3xl font-bold mb-6">5. Client Responsibilities</h2>
+
+                <!-- Point 21 -->
+                <div class="mb-8">
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <span class="point-icon text-white font-bold">21</span>
+                        Accurate Information
+                    </h3>
+                    <p class="text-gray-700">Clients are responsible for providing accurate and complete information regarding the property and any specific requirements for services. Failure to do so may result in additional charges or inability to perform the requested services.</p>
+                </div>
+
+                <!-- Point 22 -->
+                <div class="mb-8">
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <span class="point-icon text-white font-bold">22</span>
+                        Safety and Compliance
+                    </h3>
+                    <p class="text-gray-700">Clients must ensure that the property complies with all applicable laws, regulations, and safety standards. AquaGarden Care is not responsible for any violations or penalties resulting from non-compliance.</p>
+                </div>
+
+                <!-- Point 23 -->
+                <div class="mb-8">
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <span class="point-icon text-white font-bold">23</span>
+                        Pets and Animals
+                    </h3>
+                    <p class="text-gray-700">Clients must inform AquaGarden Care of any pets or animals on the property. Clients are responsible for ensuring that pets are secured and do not pose a risk to our personnel during service visits.</p>
+                </div>
+
+                <!-- Point 24 -->
+                <div class="mb-8">
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <span class="point-icon text-white font-bold">24</span>
+                        Property Damage
+                    </h3>
+                    <p class="text-gray-700">Clients are responsible for any damage to property or personal belongings that occurs as a result of our services, unless such damage is caused by our negligence. Clients should remove valuable items from the work area prior to service.</p>
+                </div>
+
+                <!-- Point 25 -->
+                <div class="mb-8">
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <span class="point-icon text-white font-bold">25</span>
+                        Communication
+                    </h3>
+                    <p class="text-gray-700">Clients agree to maintain open communication with AquaGarden Care regarding any changes in property conditions, service needs, or other relevant information that may affect the provision of services.</p>
+                </div>
+
+                <h2 class="text-3xl font-bold mb-6">6. Termination</h2>
+
+                <!-- Point 26 -->
+                <div class="mb-8">
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <span class="point-icon text-white font-bold">26</span>
+                        Termination by Client
+                    </h3>
+                    <p class="text-gray-700">Clients may terminate the service agreement at any time by providing written notice to AquaGarden Care. Any outstanding fees for services rendered up to the termination date will be due and payable.</p>
+                </div>
+
+                <!-- Point 27 -->
+                <div class="mb-8">
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <span class="point-icon text-white font-bold">27</span>
+                        Termination by AquaGarden Care
+                    </h3>
+                    <p class="text-gray-700">AquaGarden Care reserves the right to terminate the service agreement at any time for any reason, including but not limited to non-payment, unsafe conditions, or failure to comply with these terms. Clients will be notified of termination in writing.</p>
+                </div>
+
+                <!-- Point 28 -->
+                <div class="mb-8">
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <span class="point-icon text-white font-bold">28</span>
+                        Effect of Termination
+                    </h3>
+                    <p class="text-gray-700">Upon termination of the service agreement, all rights and obligations of both parties will cease, except for any obligations that expressly survive termination, including payment obligations and indemnification provisions.</p>
+                </div>
+
+                <!-- Point 29 -->
+                <div class="mb-8">
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <span class="point-icon text-white font-bold">29</span>
+                        Return of Property
+                    </h3>
+                    <p class="text-gray-700">Upon termination, clients must ensure that any property belonging to AquaGarden Care is returned promptly. This includes any tools, equipment, or materials provided for the performance of services.</p>
+                </div>
+
+                <!-- Point 30 -->
+                <div class="mb-8">
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <span class="point-icon text-white font-bold">30</span>
+                        Survival of Terms
+                    </h3>
+                    <p class="text-gray-700">Certain provisions of these Terms & Conditions will survive termination, including but not limited to liability limitations, indemnification, and payment obligations.</p>
+                </div>
+
+                <h2 class="text-3xl font-bold mb-6">7. Miscellaneous</h2>
+
+                <!-- Point 31 -->
+                <div class="mb-8">
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <span class="point-icon text-white font-bold">31</span>
+                        Governing Law
+                    </h3>
+                    <p class="text-gray-700">These Terms & Conditions shall be governed by and construed in accordance with the laws of the state in which AquaGarden Care operates, without regard to its conflict of law principles.</p>
+                </div>
+
+                <!-- Point 32 -->
+                <div class="mb-8">
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <span class="point-icon text-white font-bold">32</span>
+                        Dispute Resolution
+                    </h3>
+                    <p class="text-gray-700">Any disputes arising from these Terms & Conditions or the services provided shall be resolved through binding arbitration in accordance with the rules of the American Arbitration Association. The arbitration shall take place in the county where AquaGarden Care is located.</p>
+                </div>
+
+                <!-- Point 33 -->
+                <div class="mb-8">
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <span class="point-icon text-white font-bold">33</span>
+                        Entire Agreement
+                    </h3>
+                    <p class="text-gray-700">These Terms & Conditions constitute the entire agreement between the client and AquaGarden Care regarding the services provided and supersede all prior agreements and understandings, whether written or oral.</p>
+                </div>
+
+                <!-- Point 34 -->
+                <div class="mb-8">
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <span class="point-icon text-white font-bold">34</span>
+                        Amendments
+                    </h3>
+                    <p class="text-gray-700">AquaGarden Care reserves the right to amend these Terms & Conditions at any time. Clients will be notified of any changes, and continued use of our services after such changes constitutes acceptance of the new terms.</p>
+                </div>
+
+                <!-- Point 35 -->
+                <div class="mb-8">
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <span class="point-icon text-white font-bold">35</span>
+                        Waiver
+                    </h3>
+                    <p class="text-gray-700">No waiver of any provision of these Terms & Conditions shall be deemed a further or continuing waiver of such provision or any other provision, and any failure of AquaGarden Care to assert a right or provision shall not constitute a waiver of such right or provision.</p>
+                </div>
+
+                <!-- Point 36 -->
+                <div class="mb-8">
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <span class="point-icon text-white font-bold">36</span>
+                        Severability
+                    </h3>
+                    <p class="text-gray-700">If any provision of these Terms & Conditions is found to be invalid or unenforceable, the remaining provisions shall remain in full force and effect. The invalid provision shall be deemed modified to the minimum extent necessary to make it valid and enforceable.</p>
+                </div>
+
+                <!-- Point 37 -->
+                <div class="mb-8">
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <span class="point-icon text-white font-bold">37</span>
+                        Assignment
+                    </h3>
+                    <p class="text-gray-700">Clients may not assign or transfer their rights or obligations under these Terms & Conditions without the prior written consent of AquaGarden Care. AquaGarden Care may assign or transfer its rights and obligations at any time without notice.</p>
+                </div>
+
+                <!-- Point 38 -->
+                <div class="mb-8">
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <span class="point-icon text-white font-bold">38</span>
+                        Force Majeure
+                    </h3>
+                    <p class="text-gray-700">AquaGarden Care shall not be liable for any failure to perform its obligations under these Terms & Conditions if such failure results from any cause beyond AquaGarden Care's reasonable control, including but not limited to acts of God, war, terrorism, labor disputes, or governmental actions.</p>
+                </div>
+
+                <!-- Point 39 -->
+                <div class="mb-8">
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <span class="point-icon text-white font-bold">39</span>
+                        Contact Information
+                    </h3>
+                    <p class="text-gray-700">For any questions regarding these Terms & Conditions, please contact AquaGarden Care at the address and phone number provided below.</p>
+                </div>
+
+                <!-- Point 40 -->
+                <div class="mb-8">
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <span class="point-icon text-white font-bold">40</span>
+                        Effective Date
+                    </h3>
+                    <p class="text-gray-700">These Terms & Conditions are effective as of [insert effective date]. We encourage you to review these terms periodically for any updates or changes.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 bg-white">
+        <div class="container mx-auto px-6 text-center">
+            <p class="text-gray-700">Address: 40 W 4th St, New York, NY 10012, USA</p>
+            <p class="text-gray-700">Phone: +1 (212) 555-0187</p>
+            <p class="text-gray-700">© 2023 AquaGarden Care. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

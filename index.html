@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AquaGarden Care | Precision Hydration & Artistic Pruning</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        :root {
+            --primary: #2b6cb0;
+            --secondary: #38b2ac;
+            --accent: #f6ad55;
+            --dark: #2d3748;
+            --light: #f7fafc;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+        
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+                        url('https://images.unsplash.com/photo-1605000797499-95a51c5269ae?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            min-height: 70vh;
+        }
+        
+        .water-drop {
+            position: relative;
+        }
+        
+        .water-drop::after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%232b6cb0"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg>') no-repeat;
+            background-size: contain;
+            opacity: 0.1;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+        
+        .pruning-icon {
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23f6ad55"><path d="M7.05 14.12L5.5 12.59l-2.12 2.12 3.18 3.18-3.18 3.18 2.12 2.12 3.18-3.18 3.18 3.18 2.12-2.12-3.18-3.18 3.18-3.18-2.12-2.12-3.18 3.18zm9.9-11.71l-2.12 2.12 3.18 3.18-3.18 3.18 2.12 2.12 3.18-3.18 3.18 3.18 2.12-2.12-3.18-3.18 3.18-3.18-2.12-2.12-3.18 3.18z"/></svg>') no-repeat;
+            background-size: contain;
+            width: 24px;
+            height: 24px;
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 5px;
+        }
+        
+        .testimonial-card {
+            transition: transform 0.3s ease;
+        }
+        
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .gallery-item {
+            transition: all 0.3s ease;
+            overflow: hidden;
+        }
+        
+        .gallery-item:hover {
+            transform: scale(1.03);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+        
+        .gallery-item img {
+            transition: transform 0.5s ease;
+        }
+        
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+        
+        .nav-link {
+            position: relative;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background: var(--accent);
+            bottom: 0;
+            left: 0;
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        .nav-link[aria-current="page"]::after {
+            width: 100%;
+        }
+        
+        .service-card {
+            transition: all 0.3s ease;
+            overflow: hidden;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-3">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-4">
+                    <div class="pruning-icon"></div>
+                    <span class="text-xl font-bold text-gray-800">AquaGarden Care</span>
+                </div>
+                <div class="hidden md:flex items-center space-x4">
+                    <div class="hidden md:flex items-center space-x-8">
+                        <a href="index.html" class="nav-link py-2 px-3 text-gray-700 hover:text-gray-900" aria-current="page"  tabindex="0">Home</a>
+                        <a href="privacy.html" class="nav-link py-2 px-3 text-gray-700 hover:text-gray-900" tabindex="0">Privacy</a>
+                        <a href="terms.html" class="nav-link py-2 px-3 text-gray-700 hover:text-gray-900" tabindex="0">Terms & Conditions</a>
+                        <a href="cookies.html" class="nav-link py-2 px-3 text-gray-700 hover:text-gray-900" tabindex="0">Cookies</a>
+                        <a href="contact.html" class="nav-link py-2 px-3 text-gray-700 hover:text-gray-900" tabindex="0">Contact Us</a>
+                    </div>
+                </div>
+                <button class="md:hidden focus:outline-none">
+                    <svg class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero flex items-center justify-center text-center text-white">
+        <div class="container mx-auto px-6">
+            <h1 class="text-4xl md:text-6xl font-bold mb-4">AquaGarden Care</h1>
+            <p class="text-xl md:text-2xl mb-8">Where precision meets hydration</p>
+            <p class="text-lg md:text-xl mb-8 max-w-2xl mx-auto">Specializing in water-wise garden shaping through drip systems and artistic pruning for residential and commercial properties across the New York metropolitan area.</p>
+            <a href="#contact" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-6 rounded-full transition duration-300 inline-block">Get a Free Consultation</a>
+        </div>
+        <div class="absolute bottom-10 animate-bounce">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+            </svg>
+        </div>
+    </section>
+
+    <!-- About Us -->
+    <section class="py-20 bg-white water-drop">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-16">About AquaGarden Care</h2>
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-8 md:mb-0 md:pr-8">
+                    <img src="p1.png" alt="Gardening expert" class="rounded-lg shadow-xl w-full h-auto">
+                </div>
+                <div class="md:w-1/2">
+                    <p class="mb-6 text-lg">Founded in 2010 by master horticulturist Michael Waters, AquaGarden Care has grown from a boutique garden service to New York's premier provider of water-efficient landscape solutions. Our team now includes 12 certified specialists combining expertise in irrigation engineering, plant science, and landscape design.</p>
+                    
+                    <p class="mb-6 text-lg">We pioneered the AquaTrim methodology that synchronizes precision watering with structural pruning. This approach not only conserves water but enhances plant vitality and aesthetic appeal. Our clients typically see a 40-60% reduction in water usage while enjoying healthier, more beautiful gardens.</p>
+                    
+                    <p class="mb-6 text-lg">What sets us apart is our scientific approach to horticulture. We use soil moisture sensors, microclimate analysis, and growth pattern tracking to make data-driven decisions about each plant's care. This attention to detail has earned us recognition from the Environmental Protection Agency and New York City's sustainability programs.</p>
+                    
+                    <div class="bg-blue-50 p-6 rounded-lg border-l-4 border-blue-500 mt-8">
+                        <h3 class="text-xl font-bold mb-3 text-blue-700">Our Achievements:</h3>
+                        <ul class="list-disc pl-5 space-y-2 text-gray-700">
+                            <li>Over 600 residential and commercial properties transformed</li>
+                            <li>Recipient of NYC's Green Business Award (2018, 2020, 2022)</li>
+                            <li>Average client water savings of 52% annually</li>
+                            <li>93% client retention rate since founding</li>
+                            <li>Featured in Horticulture Today and Landscape Architecture Magazine</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-16">Our Specialized Services</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="service-card bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="h-48 overflow-hidden">
+                        <img src="s1.jpeg" alt="Precision Drip Irrigation" class="w-full h-full object-cover transition duration-500 hover:scale-110">
+                    </div>
+                    <div class="p-6">
+                        <div class="text-blue-500 mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-2m3 2v-1m3 1v-2m-6 4l-4-4m0 0l4-4m-4 4h14m-5 5v-1m0 0h-1m1 0v-1m0 0h-1m-6 4l-4-4m0 0l4-4m-4 4h14" />
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4">Precision Drip Irrigation</h3>
+                        <p class="text-gray-700 mb-4">Our custom-engineered drip systems deliver water with 95% efficiency directly to plant root zones. Using pressure-compensating emitters and smart controllers, we create systems that automatically adjust to weather conditions and plant needs.</p>
+                        <p class="text-gray-700 mb-4">We install subsurface drip lines where appropriate, reducing evaporation loss by up to 30% compared to surface systems. All installations include moisture sensors that feed data to our central monitoring platform, allowing for real-time adjustments.</p>
+                        <a href="#contact" class="inline-flex items-center text-blue-500 font-medium">Learn more
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="service-card bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="h-48 overflow-hidden">
+                        <img src="s2.jpeg" alt="Artistic Pruning" class="w-full h-full object-cover transition duration-500 hover:scale-110">
+                    </div>
+                    <div class="p-6">
+                        <div class="text-blue-500 mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4">Artistic Pruning</h3>
+                        <p class="text-gray-700 mb-4">Our signature pruning service blends Japanese niwaki aesthetics with modern horticultural science. Each cut is made with consideration for the plant's natural growth patterns, structural integrity, and future development.</p>
+                        <p class="text-gray-700 mb-4">We specialize in creating living sculptures from hedges, topiaries, and specimen trees. Our artisans use specialized tools like concave cutters and folding saws to make clean cuts that heal quickly, minimizing disease risk.</p>
+                        <p class="text-gray-700 mb-4">Seasonal maintenance pruning is scheduled according to plant species' growth cycles, ensuring optimal timing for plant health and shaping goals.</p>
+                        <a href="#contact" class="inline-flex items-center text-blue-500 font-medium">Learn more
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="service-card bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="h-48 overflow-hidden">
+                        <img src="s3.jpeg" alt="Seasonal Maintenance" class="w-full h-full object-cover transition duration-500 hover:scale-110">
+                    </div>
+                    <div class="p-6">
+                        <div class="text-blue-500 mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke -width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4">Seasonal Maintenance</h3>
+                        <p class="text-gray-700 mb-4">Our comprehensive seasonal maintenance program ensures your garden remains vibrant and healthy throughout the year. We adjust irrigation schedules, perform necessary pruning, and provide soil amendments tailored to seasonal needs.</p>
+                        <p class="text-gray-700 mb-4">In spring, we prepare your garden for blooming by assessing plant health and adjusting watering systems. Summer maintenance focuses on pest management and hydration, while fall preparations include mulching and winterizing plants to protect them from harsh conditions.</p>
+                        <p class="text-gray-700 mb-4">Our team is trained to recognize early signs of disease or stress, allowing us to intervene before issues escalate. We also provide clients with educational resources to help them understand their garden's needs.</p>
+                        <a href="#contact" class="inline-flex items-center text-blue-500 font-medium">Learn more
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Gallery -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-16">Our Work</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="gallery-item rounded-lg overflow-hidden shadow-md">
+                    <img src="g1.jpeg" alt="Garden design" class="w-full h-64 object-cover">
+                    <div class="p-4 bg-white">
+                        <h3 class="font-bold text-lg mb-4">Stunning Garden Design</h3>
+                        <p class="text-gray-600">A beautiful blend of colors and textures, showcasing our artistic pruning techniques.</p>
+                    </div>
+                </div>
+                <div class="gallery-item rounded-lg overflow-hidden shadow-md">
+                    <img src="g2.jpeg" alt="Drip irrigation system" class="w-full h-64 object-cover">
+                    <div class="p-4 bg-white">
+                        <h3 class="font-bold text-lg mb-4">Efficient Drip Irrigation</h3>
+                        <p class="text-gray-600">Our custom-designed systems ensure optimal water delivery to every plant.</p>
+                    </div>
+                </div>
+                <div class="gallery-item rounded-lg overflow-hidden shadow-md">
+                    <img src="g3.jpeg" alt="Artistic pruning" class="w-full h-64 object-cover">
+                    <div class="p-4 bg-white">
+                        <h3 class="font-bold text-lg mb-4">Artistic Pruning</h3>
+                        <p class="text-gray-600">Transforming plants into living sculptures with our expert techniques.</p>
+                    </div>
+                </div>
+                <div class="gallery-item rounded-lg overflow-hidden shadow-md">
+                    <img src="g4.jpeg" alt="Seasonal maintenance" class="w-full h-64 object-cover">
+                    <div class="p-4 bg-white">
+                        <h3 class="font-bold text-lg mb-4">Seasonal Maintenance</h3>
+                        <p class="text-gray-600">Keeping gardens vibrant and healthy throughout the year.</p>
+                    </div>
+                </div>
+                <div class="gallery-item rounded-lg overflow-hidden shadow-md">
+                    <img src="g5.jpeg" alt="Water conservation" class="w-full h-64 object-cover">
+                    <div class="p-4 bg-white">
+                        <h3 class="font-bold text-lg mb-4">Water Conservation</h3>
+                        <p class="text-gray-600">Innovative solutions for sustainable gardening.</p>
+                    </div>
+                </div>
+                <div class="gallery-item rounded-lg overflow-hidden shadow-md">
+                    <img src="g6.jpeg" alt="Client garden" class="w-full h-64 object-cover">
+                    <div class="p-4 bg-white">
+                        <h3 class="font-bold text-lg mb-4">Client Garden Transformation</h3>
+                        <p class="text-gray-600">Before and after showcasing our garden care services.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Consultant Paragraph -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-16">Expert Consultation</h2>
+            <div class="max-w-4xl mx-auto">
+                <p class="mb-6 text-lg">At AquaGarden Care, we understand that every garden is unique, which is why we begin every project with a comprehensive consultation. Our certified garden consultants will visit your property to assess your current landscape, discuss your vision, and develop a customized plan that combines water efficiency with artistic design.</p>
+                
+                <p class="mb-6 text-lg">During your consultation, our experts will evaluate key factors including soil composition, sun exposure patterns, existing plant health, and water usage. We use specialized tools like soil moisture sensors and light meters to gather precise data about your garden's conditions. This scientific approach allows us to make informed recommendations tailored specifically to your environment.</p>
+                
+                <p class="mb-6 text-lg">Our consultation process includes a detailed discussion of your aesthetic preferences, maintenance commitment, and long-term goals for the space. Whether you're looking for a low-maintenance water-wise garden or an elaborate sculpted landscape, we'll help you understand the possibilities and practical considerations.</p>
+                
+                <p class="mb-6 text-lg">Following the on-site assessment, we provide you with a written proposal outlining our recommended approach, including irrigation system specifications, pruning plans, plant recommendations, and a maintenance schedule. This document serves as a roadmap for your garden transformation and includes estimated water savings projections.</p>
+                
+                <p class="mb-6 text-lg">We also offer virtual consultation services for clients who prefer remote assistance or have smaller projects. These sessions include a video walkthrough of your garden, followed by detailed written recommendations and instructional materials.</p>
+                
+                <p class="mb-6 text-lg">Our consultants stay current with the latest developments in water conservation and pruning techniques through ongoing education. Many of our team members hold advanced certifications in sustainable landscaping and are active members of professional organizations like the American Society of Landscape Architects and the Irrigation Association.</p>
+                
+                <p class="mb-6 text-lg">Beyond the initial consultation, we provide ongoing support to answer questions and adjust your plan as needed. We believe the best gardens evolve over time, and we're committed to helping your landscape reach its full potential through every season.</p>
+                
+                <div class="bg-blue-50 p-6 rounded-lg border-l-4 border-blue-500 mt-8">
+                    <h3 class="text-xl font-bold mb-3 text-blue-700">Consultation Includes:</h3>
+                    <ul class="list-disc pl-5 space-y-2 text-gray-700">
+                        <li>90-minute on-site assessment</li>
+                        <li>Soil and light analysis</li>
+                        <li>Water usage evaluation</li>
+                        <li>Plant health assessment</li>
+                        <li>Customized design recommendations</li>
+                        <li>Written proposal with implementation plan</li>
+                        <li>Follow-up Q&A session</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Feedback -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-16">Client Feedback</h2>
+            <div class="flex flex-col space-y-8">
+                <div class="testimonial-card bg-gray-100 p-6 rounded-lg shadow-md">
+                    <p class="text-gray-700">"AquaGarden Care transformed my backyard into a beautiful oasis. Their attention to detail and expertise in water conservation is unmatched!"</p>
+                    <p class="mt-4 font-semibold">- Sarah J.</p>
+                </div>
+                <div class="testimonial-card bg-gray-100 p-6 rounded-lg shadow-md">
+                    <p class="text-gray-700">"The team was professional and knowledgeable. I loved their artistic approach to pruning!"</p>
+                    <p class="mt-4 font-semibold">- Mark T.</p>
+                </div>
+                <div class="testimonial-card bg-gray-100 p-6 rounded-lg shadow-md">
+                    <p class="text-gray-700">"I highly recommend AquaGarden Care for anyone looking to enhance their garden while conserving water!"</p>
+                    <p class="mt-4 font-semibold">- Emily R.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tips -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-16">Gardening Tips</h2>
+            <div class="max-w-4xl mx-auto">
+                <h3 class="text-2xl font-bold mb-4">1. Water Wisely</h3>
+                <p class="mb-4">Use drip irrigation systems to minimize water waste and ensure your plants receive the right amount of hydration. Regularly check and adjust your system based on seasonal changes and plant growth.</p>
+                <h3 class="text-2xl font-bold mb-4">2. Prune Regularly</h3>
+                <p class="mb-4">Regular pruning helps maintain plant health and encourages new growth. Learn the best techniques for your specific plants to promote their natural shape and vitality.</p>
+                <h3 class="text-2xl font-bold mb-4">3. Choose Native Plants</h3>
+                <p class="mb-4">Native plants are adapted to your local climate and require less water and maintenance, making them a sustainable choice for your garden.</p>
+                <h3 class="text-2xl font-bold mb-4">4. Mulch Your Garden</h3>
+                <p class="mb-4">Applying mulch helps retain soil moisture, suppress weeds, and improve soil quality over time. Organic mulches also enrich the soil as they decompose.</p>
+                <h3 class="text-2xl font-bold mb-4">5. Monitor Soil Health</h3>
+                <p class="mb-4">Regularly check your soil's pH and nutrient levels to ensure optimal plant growth and health. Consider soil testing to identify any deficiencies.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Disclaimer -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-16">Disclaimer</h2>
+            <p class="text-gray-700">The information provided by AquaGarden Care is for general informational purposes only. All information on the site is provided in good faith, however we make no representation or warranty of any kind, express or implied, regarding the accuracy, adequacy, validity, reliability, availability or completeness of any information on the site.</p>
+        </div>
+    </section>
+
+    <!-- Customer Satisfaction -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-16">Customer Satisfaction</h2>
+            <p class="text-gray-700">At AquaGarden Care, we prioritize our clients' satisfaction above all. Our commitment to quality service and sustainable practices ensures that your garden not only looks beautiful but also thrives in a water-efficient manner. We strive to exceed your expectations and create a lasting relationship built on trust and excellence.</p>
+        </div>
+    </section>
+
+    <!-- Contact Information -->
+    <footer class="py-8 bg-white">
+        <div class="container mx-auto px-6 text-center">
+            <p class="text-gray-700">Address: 40 W 4th St, New York, NY 10012, USA</p>
+            <p class="text-gray-700">© 2023 AquaGarden Care. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

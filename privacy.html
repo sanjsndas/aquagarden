@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy | AquaGarden Care</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        :root {
+            --primary: #2b6cb0;
+            --secondary: #38b2ac;
+            --accent: #f6ad55;
+            --dark: #2d3748;
+            --light: #f7fafc;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+        
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+                        url('https://images.unsplash.com/photo-1605000797499-95a51c5269ae?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            min-height: 50vh;
+        }
+        
+        .water-drop {
+            position: relative;
+        }
+        
+        .water-drop::after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%232b6cb0"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg>') no-repeat;
+            background-size: contain;
+            opacity: 0.1;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+        
+        .pruning-icon {
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23f6ad55"><path d="M7.05 14.12L5.5 12.59l-2.12 2.12 3.18 3.18-3.18 3.18 2.12 2.12 3.18-3.18 3.18 3.18 2.12-2.12-3.18-3.18 3.18-3.18-2.12-2.12-3.18 3.18zm9.9-11.71l-2.12 2.12 3.18 3.18-3.18 3.18 2.12 2.12 3.18-3.18 3.18 3.18 2.12-2.12-3.18-3.18 3.18-3.18-2.12-2.12-3.18 3.18z"/></svg>') no-repeat;
+            background-size: contain;
+            width: 24px;
+            height: 24px;
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 5px;
+        }
+        
+        .testimonial-card {
+            transition: transform 0.3s ease;
+        }
+        
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .gallery-item {
+            transition: all 0.3s ease;
+            overflow: hidden;
+        }
+        
+        .gallery-item:hover {
+            transform: scale(1.03);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+        
+        .gallery-item img {
+            transition: transform 0.5s ease;
+        }
+        
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+        
+        .nav-link {
+            position: relative;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background: var(--accent);
+            bottom: 0;
+            left: 0;
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        .nav-link[aria-current="page"]::after {
+            width: 100%;
+        }
+        
+        .service-card {
+            transition: all 0.3s ease;
+            overflow: hidden;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+        
+        .point-icon {
+            background-color: #f6ad55;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-3">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-4">
+                    <div class="pruning-icon"></div>
+                    <span class="text-xl font-bold text-gray-800">AquaGarden Care</span>
+                </div>
+                <div class="hidden md:flex items-center space-x4">
+                    <div class="hidden md:flex items-center space-x-8">
+                        <a href="index.html" class="nav-link py-2 px-3 text-gray-700 hover:text-gray-900" tabindex="0">Home</a>
+                        <a href="privacy.html" class="nav-link py-2 px-3 text-gray-700 hover:text-gray-900" aria-current="page" tabindex="0">Privacy</a>
+                        <a href="terms.html" class="nav-link py-2 px-3 text-gray-700 hover:text-gray-900" tabindex="0">Terms & Conditions</a>
+                        <a href="cookies.html" class="nav-link py-2 px-3 text-gray-700 hover:text-gray-900" tabindex="0">Cookies</a>
+                        <a href="contact.html" class="nav-link py-2 px-3 text-gray-700 hover:text-gray-900" tabindex="0">Contact Us</a>
+                    </div>
+                </div>
+                <button class="md:hidden focus:outline-none">
+                    <svg class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero flex items-center justify-center text-center text-white">
+        <div class="container mx-auto px-6">
+            <h1 class="text-4xl md:text-6xl font-bold mb-4">Privacy Policy</h1>
+            <p class="text-xl md:text-2xl mb-8">Your privacy is important to us</p>
+            <p class="text-lg md:text-xl mb-8 max-w-2xl mx-auto">Learn how AquaGarden Care collects, uses, and protects your personal information</p>
+        </div>
+    </section>
+
+    <!-- Privacy Content -->
+    <section class="py-16 bg-white water-drop">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto">
+                <p class="mb-6 text-lg">At AquaGarden Care, we are committed to protecting your privacy and ensuring the security of your personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website or use our services.</p>
+                
+                <p class="mb-6 text-lg">Please read this privacy policy carefully. By accessing or using our services, you agree to be bound by the terms described herein and all terms incorporated by reference. If you do not agree to all of these terms, do not use our services.</p>
+                
+                <h2 class="text-3xl font-bold mb-6">Information We Collect</h2>
+                
+                <!-- Point 1 -->
+                <div class="mb-8">
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <span class="point-icon text-white font-bold">1</span>
+                        Personal Identification Information
+                    </h3>
+                    <p class="text-gray-700">We collect personal identification information such as your name, email address, phone number, and mailing address when you register for our services, subscribe to our newsletter, or fill out a contact form. This information helps us provide personalized services and communicate with you effectively.</p>
+                </div>
+
+                <!-- Point 2 -->
+                <div class="mb-8">
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <span class="point-icon text-white font-bold">2</span>
+                        Payment Information
+                    </h3>
+                    <p class="text-gray-700">When you make purchases through our services, we collect payment information such as credit card numbers, billing addresses, and other financial details necessary to process your transactions. All payment information is processed through secure third-party payment processors and is not stored on our servers.</p>
+                </div>
+
+                <!-- Point 3 -->
+                <div class="mb-8">
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <span class="point-icon text-white font-bold">3</span>
+                        Technical Data
+                    </h3>
+                    <p class="text-gray-700">We automatically collect certain technical data when you visit our website, including your IP address, browser type, operating system, referring URLs, access times, and pages viewed. This information helps us analyze trends, administer the site, track user movements, and gather broad demographic information.</p>
+                </div>
+
+                <!-- Point 4 -->
+                <div class="mb-8">
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <span class="point-icon text-white font-bold">4</span>
+                        Cookies and Tracking Technologies
+                    </h3>
+                    <p class="text-gray-700">We use cookies and similar tracking technologies to track activity on our website and hold certain information. Cookies are files with small amounts of data which may include an anonymous unique identifier. You can instruct your browser to refuse all cookies or to indicate when a cookie is being sent.</p>
+                </div>
+
+                <!-- Point 5 -->
+                <div class="mb-8">
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <span class="point-icon text-white font-bold">5</span>
+                        Usage Data
+                    </h3>
+                    <p class="text-gray-700">We collect information about how you use our services, such as the pages you visit, the features you use, and the time spent on each page. This usage data helps us improve our services and develop new features that better meet our users' needs.</p>
+                </div>
+
+                <!-- Point 6 -->
+                <div class="mb-8">
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <span class="point-icon text-white font-bold">6</span>
+                        Location Information
+                    </h3>
+                    <p class="text-gray-700">With your permission, we may collect information about your precise or approximate location to provide location-based services. This information helps us offer relevant services in your area and improve our local service offerings.</p>
+                </div>
+
+                <!-- Point 7 -->
+                <div class="mb-8">
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <span class="point-icon text-white font-bold">7</span>
+                        Communication Data
+                    </h3>
+                    <p class="text-gray-700">We collect information when you communicate with us, whether through email, phone, or other channels. This includes the content of your messages and any feedback you provide about our services.</p>
+                </div>
+
+                <!-- Point 8 -->
+                <div class="mb-8">
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <span class="point-icon text-white font-bold">8</span>
+                        Third-Party Information
+                    </h3>
+                    <p class="text-gray-700">We may receive information about you from third parties, such as business partners, marketing agencies, or publicly available sources. This information is used to supplement the data we collect directly from you.</p>
+                </div>
+
+                <!-- Point 9 -->
+                <div class="mb-8">
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <span class="point-icon text-white font-bold">9</span>
+                        Social Media Information
+                    </h3>
+                    <p class="text-gray-700">If you interact with us through social media platforms, we may collect information from your social media profile as permitted by your privacy settings on those platforms. This may include your name, profile picture, and other public information.</p>
+                </div>
+
+                <!-- Point 10 -->
+                <div class="mb-8">
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <span class="point-icon text-white font-bold">10</span>
+                        Survey and Research Data
+                    </h3>
+                    <p class="text-gray-700">We may collect information you provide when participating in surveys, focus groups, or market research. This information helps us understand customer preferences and improve our services.</p>
+                </div>
+
+                <h2 class="text-3xl font-bold mb-6 mt-12">How We Use Your Information</h2>
+
+                <!-- Point 11 -->
+                <div class="mb-8">
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <span class="point-icon text-white font-bold">11</span>
+                        Providing and Improving Services
+                    </h3>
+                    <p class="text-gray-700">We use your information to provide, maintain, and improve our services. This includes processing transactions, responding to your inquiries, and developing new features and functionality that better serve our customers.</p>
+                </div>
+
+                <!-- Point 12 -->
+                <div class="mb-8">
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <span class="point-icon text-white font-bold">12</span>
+                        Personalization
+                    </h3>
+                    <p class="text-gray-700">We use your information to personalize your experience with our services. This includes showing you relevant content, recommendations, and offers based on your preferences and usage patterns.</p>
+                </div>
+
+                <!-- Point 13 -->
+                <div class="mb-8">
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <span class="point-icon text-white font-bold">13</span>
+                        Communication
+                    </h3>
+                    <p class="text-gray-700">We use your contact information to communicate with you about our services, respond to your inquiries, send you important notices, and provide customer support. We may also send you marketing communications if you have opted in to receive them.</p>
+                </div>
+
+                <!-- Point 14 -->
+                <div class="mb-8">
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <span class="point-icon text-white font-bold">14</span>
+                        Analytics and Research
+                    </h3>
+                    <p class="text-gray-700">We analyze user behavior and preferences to understand how our services are used and to improve them. This includes conducting market research and analyzing trends to develop new products and services.</p>
+                </div>
+
+                <!-- Point 15 -->
+                <div class="mb-8">
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <span class="point-icon text-white font-bold">15</span>
+                        Security and Fraud Prevention
+                    </h3>
+                    <p class="text-gray-700">We use your information to maintain the security of our services, detect and prevent fraud, and protect against unauthorized access to user accounts. This includes monitoring for suspicious activity and verifying user identities.</p>
+                </div>
+
+                <!-- Point 16 -->
+                <div class="mb-8">
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <span class="point-icon text-white font-bold">16</span>
+                        Legal Compliance
+                    </h3>
+                    <p class="text-gray-700">We may use your information to comply with applicable laws, regulations, and legal processes. This includes responding to lawful requests from public authorities and meeting our tax and accounting obligations.</p>
+                </div>
+
+                <!-- Point 17 -->
+                <div class="mb-8">
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <span class="point-icon text-white font-bold">17</span>
+                        Business Operations
+                    </h3>
+                    <p class="text-gray-700">We use your information for general business operations, such as maintaining business records, conducting audits, and managing our relationships with business partners and vendors.</p>
+                </div>
+
+                <!-- Point 18 -->
+                <div class="mb-8">
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <span class="point-icon text-white font-bold">18</span>
+                        Marketing and Advertising
+                    </h3>
+                    <p class="text-gray-700">With your consent, we may use your information for marketing and advertising purposes. This includes showing you targeted ads on our website and third-party platforms, and measuring the effectiveness of our marketing campaigns.</p>
+                </div>
+
+                <!-- Point 19 -->
+ <div class="mb-8">
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <span class="point-icon text-white font-bold">19</span>
+                        Customer Feedback and Improvement
+                    </h3>
+                    <p class="text-gray-700">We may use your feedback and suggestions to improve our services and enhance user experience. Your insights are invaluable in helping us understand customer needs and preferences, allowing us to make informed decisions about service enhancements.</p>
+                </div>
+
+                <!-- Point 20 -->
+                <div class="mb-8">
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <span class="point-icon text-white font-bold">20</span>
+                        Mergers and Acquisitions
+                    </h3>
+                    <p class="text-gray-700">In the event of a merger, acquisition, or sale of all or a portion of our assets, your information may be transferred as part of that transaction. We will notify you via email and/or a prominent notice on our website of any change in ownership or uses of your personal information.</p>
+                </div>
+
+                <h2 class="text-3xl font-bold mb-6 mt-12">How We Share Your Information</h2>
+
+                <!-- Point 21 -->
+                <div class="mb-8">
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <span class="point-icon text-white font-bold">21</span>
+                        Service Providers
+                    </h3>
+                    <p class="text-gray-700">We may share your information with third-party service providers who assist us in operating our website, conducting our business, or servicing you. These third parties are obligated to keep your information confidential and use it only for the purposes for which we disclose it to them.</p>
+                </div>
+
+                <!-- Point 22 -->
+                <div class="mb-8">
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <span class="point-icon text-white font-bold">22</span>
+                        Business Partners
+                    </h3>
+                    <p class="text-gray-700">We may share your information with our business partners to offer you certain products, services, or promotions. These partners are required to protect your information and use it only for the purposes for which it was shared.</p>
+                </div>
+
+                <!-- Point 23 -->
+                <div class="mb-8">
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <span class="point-icon text-white font-bold">23</span>
+                        Legal Authorities
+                    </h3>
+                    <p class="text-gray-700">We may disclose your information to law enforcement or other governmental authorities if required to do so by law or in response to valid requests by public authorities. This includes complying with subpoenas, court orders, or other legal processes.</p>
+                </div>
+
+                <!-- Point 24 -->
+                <div class="mb-8">
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <span class="point-icon text-white font-bold">24</span>
+                        Protection of Rights
+                    </h3>
+                    <p class="text-gray-700">We may disclose your information when we believe it is necessary to investigate, prevent, or take action regarding potential violations of our policies, suspected fraud, or to protect the rights, property, or safety of AquaGarden Care, our users, or others.</p>
+                </div>
+
+                <!-- Point 25 -->
+                <div class="mb-8">
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <span class="point-icon text-white font-bold">25</span>
+                        Aggregate Information
+                    </h3>
+                    <p class="text-gray-700">We may share aggregated, non-personally identifiable information with third parties for marketing, advertising, or research purposes. This information does not identify individual users and is used to analyze trends and user behavior.</p>
+                </div>
+
+                <h2 class="text-3xl font-bold mb-6 mt-12">Your Rights and Choices</h2>
+
+                <!-- Point 26 -->
+                <div class="mb-8">
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <span class="point-icon text-white font-bold">26</span>
+                        Access and Update Your Information
+                    </h3>
+                    <p class="text-gray-700">You have the right to access and update your personal information at any time. If you wish to review or correct your information, please contact us using the contact details provided below.</p>
+                </div>
+
+                <!-- Point 27 -->
+                <div class="mb-8">
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <span class="point-icon text-white font-bold">27</span>
+                        Opt-Out of Marketing Communications
+                    </h3>
+                    <p class="text-gray-700">If you no longer wish to receive marketing communications from us, you can opt-out by following the unsubscribe instructions included in each email or by contacting us directly. Please note that you may still receive transactional emails related to your account or services.</p>
+                </div>
+
+                <!-- Point 28 -->
+                <div class="mb-8">
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <span class="point-icon text-white font-bold">28</span>
+                        Cookie Preferences
+                    </h3>
+                    <p class="text-gray-700">You can manage your cookie preferences through your browser settings. Most browsers allow you to refuse cookies or alert you when cookies are being sent. However, if you disable cookies, some features of our services may not function properly.</p>
+                </div>
+
+                <!-- Point 29 -->
+                <div class="mb-8">
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <span class="point-icon text-white font-bold">29</span>
+                        Data Retention
+                    </h3>
+                    <p class="text-gray-700">We will retain your personal information only for as long as is necessary for the purposes set out in this Privacy Policy. We will retain and use your information to the extent necessary to comply with our legal obligations, resolve disputes, and enforce our policies.</p>
+                </div>
+
+                <!-- Point 30 -->
+                <div class="mb-8">
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <span class="point-icon text-white font-bold">30</span>
+                        Data Security
+                    </h3>
+                    <p class="text-gray-700">We take the security of your personal information seriously and implement reasonable security measures to protect it from unauthorized access, use, or disclosure. However, no method of transmission over the internet or method of electronic storage is 100% secure, and we cannot guarantee its absolute security.</p>
+                </div>
+
+                <h2 class="text-3xl font-bold mb-6 mt-12">Children's Privacy</h2>
+
+                <!-- Point 31 -->
+                <div class="mb-8">
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <span class="point-icon text-white font-bold">31</span>
+                        Protection of Children's Information
+                    </h3>
+                    <p class="text-gray-700">Our services are not intended for children under the age of 13. We do not knowingly collect personal information from children under 13. If we become aware that we have collected personal information from a child under 13, we will take steps to delete such information from our records.</p>
+                </div>
+
+                <!-- Point 32 -->
+                <div class="mb-8">
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <span class="point-icon text-white font-bold">32</span>
+                        Parental Consent
+                    </h3>
+                    <p class="text-gray-700">If you are a parent or guardian and believe that your child has provided us with personal information, please contact us. We will take steps to delete such information from our records upon verification of your identity.</p>
+                </div>
+
+                <h2 class="text-3xl font-bold mb-6 mt-12">Changes to This Privacy Policy</h2>
+
+                <!-- Point 33 -->
+                <div class="mb-8">
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <span class="point-icon text-white font-bold">33</span>
+                        Updates to Our Privacy Policy
+                    </h3>
+                    <p class="text-gray-700">We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the effective date at the top of this Privacy Policy. You are advised to review this Privacy Policy periodically for any changes.</p>
+                </div>
+
+                <!-- Point 34 -->
+                <div class="mb-8">
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <span class="point-icon text-white font-bold">34</span>
+                        Your Continued Use
+                    </h3>
+                    <p class="text-gray-700">Your continued use of our services after we post any modifications to the Privacy Policy on this page will constitute your acknowledgment of the modifications and your consent to abide by and be bound by the modified Privacy Policy.</p>
+                </div>
+
+                <h2 class="text-3xl font-bold mb-6 mt-12">Contact Us</h2>
+
+                <!-- Point 35 -->
+                <div class="mb-8">
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <span class="point-icon text-white font-bold">35</span>
+                        How to Reach Us
+                    </h3>
+                    <p class="text-gray-700">If you have any questions about this Privacy Policy, please contact us:</p>
+                    <p class="text-gray-700">Email: info@aquagardencare.com</p>
+                    <p class="text-gray-700">Phone: +1 (212) 555-0187</p>
+                </div>
+
+                <!-- Point 36 -->
+                <div class="mb-8">
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <span class="point-icon text-white font-bold">36</span>
+                        Feedback and Concerns
+                    </h3>
+                    <p class="text-gray-700">We welcome your feedback and concerns regarding our privacy practices. If you believe that we have not adhered to this Privacy Policy, please contact us, and we will take steps to address your concerns.</p>
+                </div>
+
+                <!-- Point 37 -->
+                <div class="mb-8">
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <span class="point-icon text-white font-bold">37</span>
+                        Data Protection Authority
+                    </h3>
+                    <p class="text-gray-700">If you believe that your privacy rights have been violated, you have the right to lodge a complaint with a data protection authority in your jurisdiction. We encourage you to contact us first to resolve any concerns before reaching out to a regulatory body.</p>
+                </div>
+
+                <!-- Point 38 -->
+                <div class="mb-8">
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <span class="point-icon text-white font-bold">38</span>
+                        International Data Transfers
+                    </h3>
+                    <p class="text-gray-700">Your information, including personal data, may be transferred to — and maintained on — computers located outside of your state, province, country, or other governmental jurisdiction where the data protection laws may differ from those of your jurisdiction.</p>
+                </div>
+
+                <!-- Point 39 -->
+                <div class="mb-8">
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <span class="point-icon text-white font-bold">39</span>
+                        Consent to Processing
+                    </h3>
+                    <p class="text-gray-700">By using our services, you consent to the processing of your information in accordance with this Privacy Policy. If you do not agree to the terms of this Privacy Policy, please do not use our services.</p>
+                </div>
+
+                <!-- Point 40 -->
+                <div class="mb-8">
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <span class="point-icon text-white font-bold">40</span>
+                        Effective Date
+                    </h3>
+                    <p class="text-gray-700">This Privacy Policy is effective as of [insert effective date]. We encourage you to review this policy periodically for any updates or changes.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 bg-white">
+        <div class="container mx-auto px-6 text-center">
+            <p class="text-gray-700">Address: 40 W 4th St, New York, NY 10012, USA</p>
+            <p class="text-gray-700">Phone: +1 (212) 555-0187</p>
+            <p class="text-gray-700">© 2023 AquaGarden Care. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
